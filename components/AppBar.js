@@ -6,21 +6,23 @@ import {
   Box,
   IconButton,
   Button,
-  Menu,
-  MenuItem,
+  // Menu,
+  // MenuItem,
   Container,
   Drawer,
   List,
   ListItem,
   ListItemText,
 } from '@mui/material';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useRouter } from 'next/router';
 
 const ResponsiveAppBar = () => {
+  const router = useRouter();
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [anchorElProfile, setAnchorElProfile] = useState(null);
+  // const [anchorElProfile, setAnchorElProfile] = useState(null);
 
   const handleOpenDrawer = () => {
     setDrawerOpen(true);
@@ -30,13 +32,13 @@ const ResponsiveAppBar = () => {
     setDrawerOpen(false);
   };
 
-  const handleOpenProfileMenu = (event) => {
-    setAnchorElProfile(event.currentTarget);
-  };
+  // const handleOpenProfileMenu = (event) => {
+  //   setAnchorElProfile(event.currentTarget);
+  // };
 
-  const handleCloseProfileMenu = () => {
-    setAnchorElProfile(null);
-  };
+  // const handleCloseProfileMenu = () => {
+  //   setAnchorElProfile(null);
+  // };
 
   return (
     <AppBar position="static" color="primary">
@@ -74,13 +76,13 @@ const ResponsiveAppBar = () => {
             </IconButton>
             <Drawer anchor="left" open={drawerOpen} onClose={handleCloseDrawer}>
               <List sx={{ width: 250 }}>
-                <ListItem button onClick={handleCloseDrawer}>
+                <ListItem button onClick={() => router.push('/')}>
                   <ListItemText primary="Home" />
                 </ListItem>
-                <ListItem button onClick={handleCloseDrawer}>
+                <ListItem button onClick={() => router.push('/products')}>
                   <ListItemText primary="Products" />
                 </ListItem>
-                <ListItem button onClick={handleCloseDrawer}>
+                <ListItem button onClick={() => router.push('/about')}>
                   <ListItemText primary="About Us" />
                 </ListItem>
               </List>
@@ -117,7 +119,7 @@ const ResponsiveAppBar = () => {
           </Box>
 
           {/* Icons for Add to Cart and Profile */}
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          {/* <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <IconButton size="large" color="inherit">
               <ShoppingCartIcon />
             </IconButton>
@@ -148,7 +150,7 @@ const ResponsiveAppBar = () => {
               <MenuItem onClick={handleCloseProfileMenu}>Orders</MenuItem>
               <MenuItem onClick={handleCloseProfileMenu}>Logout</MenuItem>
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

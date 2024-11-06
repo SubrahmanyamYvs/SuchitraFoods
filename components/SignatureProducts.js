@@ -11,32 +11,59 @@ import {
 
 const products = [
   {
-    id: 1,
-    image: '/images/kandi.jpg',
-    title: 'Product 1',
-    description: 'Top selling product',
-    price: '$20',
+    product_id: 'SF-01',
+    product_image: '/images/kandi.jpg',
+    product_name: 'Kandi Podi',
+    product_description:
+      'Our Kandi Podi blends high-quality lentils with rich, savory flavor. Perfect with mango, tomato, or Gongura pickles, it enhances rice and ghee with a comforting taste.',
+    best_used_for:
+      'Mixing with rice, ghee, and pickles or as a flavorful topping for dosa and idli.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
   },
   {
-    id: 2,
-    image: '/images/karam.jpg',
-    title: 'Product 2',
-    description: 'Best quality',
-    price: '$30',
+    product_id: 'SF-02',
+    product_image: '/images/nuvulla.jpg',
+    product_name: 'Nuvvula Podi',
+    product_description:
+      'Finely ground from roasted sesame seeds, this podi adds a nutty richness and health benefits. A sprinkle transforms simple dishes with depth and a hint of sesame.',
+    best_used_for:
+      'Mixing with rice, seasoning salads, or adding richness to curries.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
   },
   {
-    id: 3,
-    image: '/images/nuvulla.jpg',
-    title: 'Product 3',
-    description: 'Highly rated',
-    price: '$25',
+    product_id: 'SF-03',
+    product_image: '/images/karam.jpg',
+    product_name: 'Nalla Karapodi/Idli Karam',
+    product_description:
+      'Spicy and smoky, this chili powder packs an intense flavor, ideal for adding heat. Made in a clean environment, it’s a delicious way to spice up your breakfast dishes or curries.',
+    best_used_for: 'Pairing with ghee on idli, dosa, or upma.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
   },
   {
-    id: 4,
-    image: '/images/kandi.jpg',
-    title: 'Product 4',
-    description: 'Popular item',
-    price: '$40',
+    product_id: 'SF-04',
+    product_image: '/images/karam.jpg',
+    product_name: 'Kura Podi',
+    product_description:
+      'A special blend of spices, Kura Podi infuses curries and vegetable dishes with warmth and depth. This spice mix captures the traditional flavors of Andhra and Telangana.',
+    best_used_for:
+      'Flavoring vegetable curries, enhancing gravies, and adding aroma to stir-fries.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
   },
 ];
 
@@ -64,7 +91,7 @@ const SignatureProducts = () => {
             fontSize: { xs: '1.8rem' },
           }}
         >
-          Top Selling Products
+          Signature Products
         </Typography>
         <Grid container spacing={4} justifyContent="center">
           {products.map((product) => (
@@ -79,23 +106,53 @@ const SignatureProducts = () => {
                 <CardMedia
                   component="img"
                   height="180"
-                  image={product.image}
-                  alt={product.title}
+                  image={product.product_image}
+                  alt={product.product_name}
                 />
                 <CardContent>
-                  <Typography variant="h6">{product.title}</Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {product.description}
+                  <Typography variant="h6">{product.product_name}</Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ marginBottom: '1em', maxWidth: '300px' }}
+                  >
+                    {product.product_description}
                   </Typography>
                   <Typography
-                    variant="h6"
-                    color="primary"
-                    sx={{ marginTop: '0.5em' }}
+                    variant="subtitle2"
+                    color="text.secondary"
+                    sx={{ maxWidth: '300px' }}
                   >
-                    {product.price}
+                    Best used for: {product.best_used_for}
                   </Typography>
+                  {/* Display Quantities and Prices */}
+                  <Box sx={{ marginTop: '1em' }}>
+                    <Typography variant="body2" color="text.secondary">
+                      Available Quantities:
+                    </Typography>
+                    <Box sx={{ marginTop: '0.5em' }}>
+                      {product.quantities_available.map((quantity) => (
+                        <Box
+                          key={quantity}
+                          sx={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            padding: '0.5em 0',
+                            borderBottom: '1px solid #eee',
+                          }}
+                        >
+                          <Typography variant="body2" color="text.primary">
+                            {quantity}
+                          </Typography>
+                          <Typography variant="body2" color="primary">
+                            ₹{product.prices[quantity]}
+                          </Typography>
+                        </Box>
+                      ))}
+                    </Box>
+                  </Box>
                 </CardContent>
-                <Box
+                {/* <Box
                   sx={{
                     padding: '1em',
                     display: 'flex',
@@ -104,7 +161,7 @@ const SignatureProducts = () => {
                 >
                   <Button variant="outlined">Add to Cart</Button>
                   <Button variant="text">View Details</Button>
-                </Box>
+                </Box> */}
               </Card>
             </Grid>
           ))}

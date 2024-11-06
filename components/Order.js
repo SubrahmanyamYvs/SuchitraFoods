@@ -67,14 +67,7 @@ const Order = () => {
           sx={{ display: 'flex', alignItems: 'stretch' }}
         >
           {products.map((product) => (
-            <Grid
-              item
-              xs={12}
-              md={6}
-              lg={4}
-              key={product.id}
-              sx={{ minWidth: 200, maxWidth: isLargeScreen ? 300 : 'none' }}
-            >
+            <Grid item xs={12} sm={6} md={3} key={product.id}>
               <Card
                 key={product.id}
                 sx={{
