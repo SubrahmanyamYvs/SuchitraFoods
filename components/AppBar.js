@@ -76,7 +76,13 @@ const ResponsiveAppBar = () => {
             </IconButton>
             <Drawer anchor="left" open={drawerOpen} onClose={handleCloseDrawer}>
               <List sx={{ width: 250 }}>
-                <ListItem button onClick={() => router.push('/')}>
+                <ListItem
+                  button
+                  onClick={() => {
+                    handleCloseDrawer();
+                    router.push('/');
+                  }}
+                >
                   <ListItemText primary="Home" />
                 </ListItem>
                 <ListItem
