@@ -8,6 +8,7 @@ import {
   CardContent,
   Button,
   Chip,
+  Link,
 } from '@mui/material';
 
 import { useRouter } from 'next/router';
@@ -204,16 +205,21 @@ const SignatureProducts = () => {
                     </Box>
                   </Box>
                 </CardContent>
-                {/* <Box
+                <Box
                   sx={{
                     padding: '1em',
                     display: 'flex',
                     justifyContent: 'space-around',
                   }}
                 >
-                  <Button variant="outlined">Add to Cart</Button>
-                  <Button variant="text">View Details</Button>
-                </Box> */}
+                  <Button
+                    variant="text"
+                    component={Link}
+                    href={`/product/${product.product_id}`}
+                  >
+                    View Details
+                  </Button>
+                </Box>
               </Card>
             </Grid>
           ))}
