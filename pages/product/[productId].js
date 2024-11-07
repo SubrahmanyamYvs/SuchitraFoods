@@ -27,10 +27,22 @@ export async function getStaticProps({ params }) {
 }
 
 const ProductDetail = ({ product }) => {
-  if (!product) return <Typography>Product not found.</Typography>;
+  const router = useRouter();
 
+  const handleBackClick = () => {
+    router.push('/products'); // Adjust the path to your products page if different
+  };
+
+  if (!product) return <Typography>Product not found.</Typography>;
   return (
     <Box sx={{ p: 4 }}>
+      <Button
+        variant="contained"
+        onClick={handleBackClick}
+        sx={{ marginBottom: '1rem' }}
+      >
+        &larr; Back to Products
+      </Button>
       <Grid container spacing={4} alignItems="center">
         {/* Image on left in md and lg */}
         <Grid item xs={12} md={6}>

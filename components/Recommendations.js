@@ -8,6 +8,7 @@ import {
   CardMedia,
   Button,
   Chip,
+  Link,
 } from '@mui/material';
 import PropTypes from 'prop-types';
 
@@ -109,7 +110,12 @@ const Recommendations = ({ products }) => {
                 </Box>
               </CardContent>
               <Box sx={{ p: 2, textAlign: 'center' }}>
-                <Button variant="outlined" fullWidth>
+                <Button
+                  variant="outlined"
+                  fullWidth
+                  component={Link}
+                  href={`/product/${product.product_id}`}
+                >
                   View Product
                 </Button>
               </Box>
