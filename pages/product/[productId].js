@@ -125,9 +125,9 @@ const ProductDetail = ({ product }) => {
             </Box>
 
             {/* Add to Cart Button */}
-            <Button variant="contained" color="primary" sx={{ mt: 3 }}>
+            {/* <Button variant="contained" color="primary" sx={{ mt: 3 }}>
               Add to Cart
-            </Button>
+            </Button> */}
           </Grid>
         </Grid>
         <Divider sx={{ my: 4 }} />
