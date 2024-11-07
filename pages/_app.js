@@ -1,4 +1,5 @@
 // pages/_app.js
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
