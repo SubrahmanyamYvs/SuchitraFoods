@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.suchitrafoods.com/
+
+# Sitemaps
+Sitemap: https://www.suchitrafoods.com/sitemap.xml
