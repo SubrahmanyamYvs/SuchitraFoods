@@ -8,72 +8,237 @@ import {
 } from '@mui/material';
 import ProductCard from '../components/ProductCard';
 
-const products = [
+export const products = [
   {
-    id: 1,
-    image: '/images/kandi.jpg',
-    title: 'Product 1',
-    description: 'This is a description of product 1.',
-    price: 29.99,
-    available: 10,
+    product_id: 'SF-01',
+    product_name: 'Kandi Podi',
+    product_image: '/images/kandi.jpg',
+    product_description:
+      'Our Kandi Podi blends high-quality lentils with rich, savory flavor. Perfect with mango, tomato, or Gongura pickles, it enhances rice and ghee with a comforting taste.',
+    best_used_for:
+      'Mixing with rice, ghee, and pickles or as a flavorful topping for dosa and idli.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    discountedPrices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    ingredients: [
+      'Lentils',
+      'Chili powder',
+      'Salt',
+      'Cumin seeds',
+      'Garlic powder',
+    ],
+    nutritionalInfo: {
+      calories: '50 kcal',
+      protein: '4g',
+      fat: '1g',
+      carbohydrates: '8g',
+      fiber: '2g',
+      sodium: '150mg',
+    },
   },
   {
-    id: 2,
-    image: '/images/karam.jpg',
-    title: 'Product 2',
-    description: 'This is a description of product 2.',
-    price: 49.99,
-    available: 5,
+    product_id: 'SF-02',
+    product_name: 'Nuvvula Podi',
+    product_image: '/images/nuvulla.jpg',
+    product_description:
+      'Finely ground from roasted sesame seeds, this podi adds a nutty richness and health benefits. A sprinkle transforms simple dishes with depth and a hint of sesame.',
+    best_used_for:
+      'Mixing with rice, seasoning salads, or adding richness to curries.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    discountedPrices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    ingredients: [
+      'Lentils',
+      'Chili powder',
+      'Salt',
+      'Cumin seeds',
+      'Garlic powder',
+    ],
+    nutritionalInfo: {
+      calories: '50 kcal',
+      protein: '4g',
+      fat: '1g',
+      carbohydrates: '8g',
+      fiber: '2g',
+      sodium: '150mg',
+    },
   },
   {
-    id: 3,
-    image: '/images/nuvulla.jpg',
-    title: 'Product 3',
-    description: 'This is a description of product 3.',
-    price: 49.99,
-    available: 5,
+    product_id: 'SF-03',
+    product_name: 'Palli Podi',
+    product_image: '/images/kandi.jpg',
+    product_description:
+      'Bold, nutty, and packed with flavor, our Palli Podi uses premium peanuts ground to perfection. It brings a satisfying crunch and a touch of protein to any meal.',
+    best_used_for:
+      'Rice dishes, chutneys, or as a crunchy side for breakfast dishes like idli and dosa.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    discountedPrices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    ingredients: [
+      'Lentils',
+      'Chili powder',
+      'Salt',
+      'Cumin seeds',
+      'Garlic powder',
+    ],
+    nutritionalInfo: {
+      calories: '50 kcal',
+      protein: '4g',
+      fat: '1g',
+      carbohydrates: '8g',
+      fiber: '2g',
+      sodium: '150mg',
+    },
   },
   {
-    id: 4,
-    image: '/images/karam.jpg',
-    title: 'Product 4',
-    description: 'This is a description of product 4.',
-    price: 49.99,
-    available: 5,
+    product_id: 'SF-04',
+    product_name: 'Nalla Karapodi/Idli Karam',
+    product_image: '/images/karam.jpg',
+    product_description:
+      'Spicy and smoky, this chili powder packs an intense flavor, ideal for adding heat. Made in a clean environment, it’s a delicious way to spice up your breakfast dishes or curries.',
+    best_used_for: 'Pairing with ghee on idli, dosa, or upma.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    discountedPrices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    ingredients: [
+      'Lentils',
+      'Chili powder',
+      'Salt',
+      'Cumin seeds',
+      'Garlic powder',
+    ],
+    nutritionalInfo: {
+      calories: '50 kcal',
+      protein: '4g',
+      fat: '1g',
+      carbohydrates: '8g',
+      fiber: '2g',
+      sodium: '150mg',
+    },
   },
   {
-    id: 5,
-    image: '/images/kandi.jpg',
-    title: 'Product 1',
-    description: 'This is a description of product 1.',
-    price: 29.99,
-    available: 10,
+    product_id: 'SF-05',
+    product_name: 'Kobbari Podi',
+    product_image: '/images/nuvulla.jpg',
+    product_description:
+      'Sun-dried coconut creates this creamy, naturally sweet podi. Bringing tropical flavors of South India, it enriches every bite with a homemade touch.',
+    best_used_for:
+      'Adding depth to rice, curries, vegetable dishes, or topping idli and dosa.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    discountedPrices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    ingredients: [
+      'Lentils',
+      'Chili powder',
+      'Salt',
+      'Cumin seeds',
+      'Garlic powder',
+    ],
+    nutritionalInfo: {
+      calories: '50 kcal',
+      protein: '4g',
+      fat: '1g',
+      carbohydrates: '8g',
+      fiber: '2g',
+      sodium: '150mg',
+    },
   },
   {
-    id: 6,
-    image: '/images/karam.jpg',
-    title: 'Product 2',
-    description: 'This is a description of product 2.',
-    price: 49.99,
-    available: 5,
+    product_id: 'SF-06',
+    product_name: 'Putnalu Podi',
+    product_image: '/images/karam.jpg',
+    product_description:
+      'Lightly nutty and made from roasted chickpeas, this podi is packed with protein and crunch, making healthy eating delicious and easy.',
+    best_used_for:
+      'Mixing with rice and ghee or topping your favorite breakfast dishes.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    discountedPrices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    ingredients: [
+      'Lentils',
+      'Chili powder',
+      'Salt',
+      'Cumin seeds',
+      'Garlic powder',
+    ],
+    nutritionalInfo: {
+      calories: '50 kcal',
+      protein: '4g',
+      fat: '1g',
+      carbohydrates: '8g',
+      fiber: '2g',
+      sodium: '150mg',
+    },
   },
   {
-    id: 7,
-    image: '/images/nuvulla.jpg',
-    title: 'Product 3',
-    description: 'This is a description of product 3.',
-    price: 49.99,
-    available: 5,
+    product_id: 'SF-07',
+    product_name: 'Kura Podi',
+    product_image: '/images/nuvulla.jpg',
+    product_description:
+      'A special blend of spices, Kura Podi infuses curries and vegetable dishes with warmth and depth. This spice mix captures the traditional flavors of Andhra and Telangana.',
+    best_used_for:
+      'Flavoring vegetable curries, enhancing gravies, and adding aroma to stir-fries.',
+    quantities_available: ['100gms', '200gms'],
+    prices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    discountedPrices: {
+      '100gms': 125,
+      '200gms': 145,
+    },
+    ingredients: [
+      'Lentils',
+      'Chili powder',
+      'Salt',
+      'Cumin seeds',
+      'Garlic powder',
+    ],
+    nutritionalInfo: {
+      calories: '50 kcal',
+      protein: '4g',
+      fat: '1g',
+      carbohydrates: '8g',
+      fiber: '2g',
+      sodium: '150mg',
+    },
   },
-  {
-    id: 8,
-    image: '/images/karam.jpg',
-    title: 'Product 4',
-    description: 'This is a description of product 4.',
-    price: 49.99,
-    available: 5,
-  },
-  // More products...
 ];
 
 const handleAddToCart = (productId) => {
@@ -131,15 +296,7 @@ const ProductsPage = () => {
             md={viewMode === 'grid' ? 4 : 12}
             key={product.id}
           >
-            <ProductCard
-              image={product.image}
-              title={product.title}
-              description={product.description}
-              price={product.price}
-              available={product.available}
-              onAddToCart={() => handleAddToCart(product.id)}
-              viewMode={viewMode}
-            />
+            <ProductCard product={product} viewMode={viewMode} />
           </Grid>
         ))}
       </Grid>

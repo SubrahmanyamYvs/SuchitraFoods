@@ -7,7 +7,10 @@ import {
   CardMedia,
   CardContent,
   Button,
+  Chip,
 } from '@mui/material';
+
+import { useRouter } from 'next/router';
 
 const products = [
   {
@@ -15,11 +18,15 @@ const products = [
     product_image: '/images/kandi.jpg',
     product_name: 'Kandi Podi',
     product_description:
-      'Our Kandi Podi blends high-quality lentils with rich, savory flavor. Perfect with mango, tomato, or Gongura pickles, it enhances rice and ghee with a comforting taste.',
+      'Our Kandi Podi is a traditional Andhra spice powder made from premium quality lentils, carefully roasted and ground to perfection. It has a savory, rich flavor that makes it a comforting addition to any meal.',
     best_used_for:
       'Mixing with rice, ghee, and pickles or as a flavorful topping for dosa and idli.',
     quantities_available: ['100gms', '200gms'],
     prices: {
+      '100gms': 150,
+      '200gms': 165,
+    },
+    discountedPrices: {
       '100gms': 125,
       '200gms': 145,
     },
@@ -34,6 +41,10 @@ const products = [
       'Mixing with rice, seasoning salads, or adding richness to curries.',
     quantities_available: ['100gms', '200gms'],
     prices: {
+      '100gms': 150,
+      '200gms': 165,
+    },
+    discountedPrices: {
       '100gms': 125,
       '200gms': 145,
     },
@@ -47,6 +58,10 @@ const products = [
     best_used_for: 'Pairing with ghee on idli, dosa, or upma.',
     quantities_available: ['100gms', '200gms'],
     prices: {
+      '100gms': 150,
+      '200gms': 165,
+    },
+    discountedPrices: {
       '100gms': 125,
       '200gms': 145,
     },
@@ -61,6 +76,10 @@ const products = [
       'Flavoring vegetable curries, enhancing gravies, and adding aroma to stir-fries.',
     quantities_available: ['100gms', '200gms'],
     prices: {
+      '100gms': 150,
+      '200gms': 165,
+    },
+    discountedPrices: {
       '100gms': 125,
       '200gms': 145,
     },
@@ -68,6 +87,11 @@ const products = [
 ];
 
 const SignatureProducts = () => {
+  const router = useRouter();
+
+  const handleLearnMore = () => {
+    router.push('/products'); // Adjust the path based on your routing setup
+  };
   return (
     <Box
       component="main"
@@ -123,12 +147,12 @@ const SignatureProducts = () => {
                     color="text.secondary"
                     sx={{ maxWidth: '300px' }}
                   >
-                    Best used for: {product.best_used_for}
+                    <strong>Best used for:</strong> {product.best_used_for}
                   </Typography>
                   {/* Display Quantities and Prices */}
                   <Box sx={{ marginTop: '1em' }}>
                     <Typography variant="body2" color="text.secondary">
-                      Available Quantities:
+                      <strong>Available Quantities:</strong>
                     </Typography>
                     <Box sx={{ marginTop: '0.5em' }}>
                       {product.quantities_available.map((quantity) => (
@@ -144,9 +168,37 @@ const SignatureProducts = () => {
                           <Typography variant="body2" color="text.primary">
                             {quantity}
                           </Typography>
-                          <Typography variant="body2" color="primary">
-                            ₹{product.prices[quantity]}
-                          </Typography>
+                          <Chip
+                            label="Launch Offer"
+                            color="primary"
+                            sx={{ alignSelf: 'start', marginBottom: '0.5em' }}
+                            size="small"
+                          />
+                          {/* Show Original Price with Strikethrough if Discounted Price is Available */}
+                          {product?.discountedPrices[quantity] ? (
+                            <Box
+                              sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5em',
+                              }}
+                            >
+                              <Typography
+                                variant="body2"
+                                color="text.secondary"
+                                sx={{ textDecoration: 'line-through' }}
+                              >
+                                ₹{product.prices[quantity]}
+                              </Typography>
+                              <Typography variant="body2" color="primary">
+                                ₹{product.discountedPrices[quantity]}
+                              </Typography>
+                            </Box>
+                          ) : (
+                            <Typography variant="body2" color="primary">
+                              ₹{product.prices[quantity]}
+                            </Typography>
+                          )}
                         </Box>
                       ))}
                     </Box>
@@ -166,6 +218,23 @@ const SignatureProducts = () => {
             </Grid>
           ))}
         </Grid>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleLearnMore}
+          sx={{
+            alignSelf: { xs: 'center', md: 'flex-start' },
+            marginTop: { xs: '1em', md: '1em' },
+            padding: '0.5em 2em',
+            backgroundColor: '#E04F00',
+            color: 'white',
+            '&:hover': {
+              backgroundColor: '#c43d00',
+            },
+          }}
+        >
+          Explore More
+        </Button>
       </Box>
     </Box>
   );

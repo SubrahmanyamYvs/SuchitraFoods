@@ -1,10 +1,26 @@
 import React from 'react';
-import { Box, Container, Typography, Grid2 as Grid, Link } from '@mui/material';
+import {
+  Box,
+  Container,
+  Typography,
+  Grid2 as Grid,
+  Link,
+  useMediaQuery,
+} from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { useTheme } from '@mui/material/styles';
 
 const Footer = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detects mobile view
+
+  const phoneNumber = '+919032090990'; // Replace with actual phone number
+  const preFilledText = encodeURIComponent(
+    "Hi! I'm interested in learning more about your products."
+  );
   return (
     <Box
       sx={{
@@ -38,20 +54,56 @@ const Footer = () => {
                 <EmailIcon />
               </Grid>
               <Grid item>
-                <Typography variant="body2">
-                  Email: support@suchitrafoods.com
+                <Typography
+                  variant="body2"
+                  component={Link}
+                  href="mailto:support@suchitrafoods.com"
+                  color="white"
+                >
+                  support@suchitrafoods.com
                 </Typography>
               </Grid>
             </Grid>
+            {isMobile && (
+              <Grid container spacing={2} alignItems="center" sx={{ mt: 1 }}>
+                <Grid item>
+                  <WhatsAppIcon sx={{ color: '#25D366' }} />
+                </Grid>
+                <Grid item>
+                  <Typography
+                    variant="body2"
+                    component={Link}
+                    href={`https://wa.me/${phoneNumber}?text=${preFilledText}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color="white"
+                  >
+                    Chat with us on WhatsApp
+                  </Typography>
+                </Grid>
+              </Grid>
+            )}
             <Grid container spacing={2} alignItems="center" sx={{ mt: 1 }}>
               <Grid item>
                 <PhoneIcon />
               </Grid>
               <Grid item>
-                <Typography variant="body2">+91 73311 30990</Typography>
+                <Typography
+                  variant="body2"
+                  component={Link}
+                  href="tel:+919032090990"
+                  color="white"
+                >
+                  +91 9032090990
+                </Typography>
               </Grid>
             </Grid>
-            <Grid container spacing={2} alignItems="center" sx={{ mt: 1 }}>
+            <Grid
+              container
+              spacing={2}
+              alignItems="center"
+              sx={{ mt: 1, flexWrap: 'nowrap' }}
+            >
               <Grid item>
                 <LocationOnIcon />
               </Grid>
