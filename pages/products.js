@@ -247,26 +247,26 @@ const handleAddToCart = (productId) => {
 };
 
 const ProductsPage = () => {
-  const [viewMode, setViewMode] = useState('grid');
+  // const [viewMode, setViewMode] = useState('grid');
+  const viewMode = 'grid';
+  // useEffect(() => {
+  //   // Fetch the saved view mode from localStorage on component mount
+  //   const savedViewMode = window.localStorage.getItem('viewMode');
+  //   if (savedViewMode) {
+  //     setViewMode(savedViewMode);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    // Fetch the saved view mode from localStorage on component mount
-    const savedViewMode = window.localStorage.getItem('viewMode');
-    if (savedViewMode) {
-      setViewMode(savedViewMode);
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Save the view mode to localStorage whenever it changes
+  //   window.localStorage.setItem('viewMode', viewMode);
+  // }, [viewMode]);
 
-  useEffect(() => {
-    // Save the view mode to localStorage whenever it changes
-    window.localStorage.setItem('viewMode', viewMode);
-  }, [viewMode]);
-
-  const handleViewToggle = (event, newViewMode) => {
-    if (newViewMode !== null) {
-      setViewMode(newViewMode);
-    }
-  };
+  // const handleViewToggle = (event, newViewMode) => {
+  //   if (newViewMode !== null) {
+  //     setViewMode(newViewMode);
+  //   }
+  // };
 
   return (
     <>
@@ -285,7 +285,7 @@ const ProductsPage = () => {
           All Products
         </Typography>
         {/* Toggle Button for Grid/List View Switch */}
-        <ToggleButtonGroup
+        {/* <ToggleButtonGroup
           value={viewMode}
           exclusive
           onChange={handleViewToggle}
@@ -298,7 +298,7 @@ const ProductsPage = () => {
           <ToggleButton value="list" aria-label="list view">
             List
           </ToggleButton>
-        </ToggleButtonGroup>
+        </ToggleButtonGroup> */}
         <Grid container spacing={3} sx={{ justifyContent: 'center', mb: 2 }}>
           {products.map((product) => (
             <Grid

@@ -16,7 +16,7 @@ import { useTheme } from '@mui/material/styles';
 const Footer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detects mobile view
-
+  const currentYear = new Date().getFullYear(); // Get the current year
   const phoneNumber = '+919032090990'; // Replace with actual phone number
   const preFilledText = encodeURIComponent(
     "Hi! I'm interested in learning more about your products."
@@ -123,7 +123,7 @@ const Footer = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={6} columnSpacing={2}>
+          <Grid item xs={12} md={6}>
             <Typography variant="h6" gutterBottom>
               Useful Links
             </Typography>
@@ -165,6 +165,13 @@ const Footer = () => {
                 Cancellations & Returns
               </Link>
             </Box>
+          </Grid>
+        </Grid>
+        <Grid container justifyContent="center" sx={{ mt: 4 }}>
+          <Grid item>
+            <Typography variant="body2" align="center">
+              &copy; {currentYear} Suchitra Industries. All rights reserved.
+            </Typography>
           </Grid>
         </Grid>
       </Container>
