@@ -69,7 +69,7 @@ const PrivacyPolicy = () => {
           <Typography variant="h6" gutterBottom>
             4. Security
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1">
             We implement industry-standard security measures to protect your
             data. However, no method of transmission over the internet is
             completely secure.
@@ -78,7 +78,7 @@ const PrivacyPolicy = () => {
           <Typography variant="h6" gutterBottom>
             5. Cookies
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1">
             Our website uses cookies to enhance your browsing experience. You
             can manage cookie settings through your browser.
           </Typography>
@@ -86,7 +86,7 @@ const PrivacyPolicy = () => {
           <Typography variant="h6" gutterBottom>
             6. Your Rights
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1">
             You may request to access, correct, or delete your personal
             information by contacting us.
           </Typography>
@@ -94,7 +94,7 @@ const PrivacyPolicy = () => {
           <Typography variant="h6" gutterBottom>
             7. Policy Updates
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1">
             We may update this policy periodically. Changes will be posted on
             our website.
           </Typography>
@@ -102,7 +102,7 @@ const PrivacyPolicy = () => {
           <Typography variant="h6" gutterBottom>
             Contact Us
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1">
             For any privacy-related questions, please reach out to us at{' '}
             <Link href="mailto:support@suchitrafoods.com">
               support@suchitrafoods.com

@@ -10,7 +10,7 @@ import {
   Chip,
   Link,
 } from '@mui/material';
-
+import { useAnalytics } from '../lib/useAnalytics';
 import { useRouter } from 'next/router';
 
 const products = [
@@ -89,9 +89,23 @@ const products = [
 
 const SignatureProducts = () => {
   const router = useRouter();
+  const { trackEvent } = useAnalytics();
 
   const handleLearnMore = () => {
+    trackEvent({
+      action: 'click',
+      category: 'button',
+      label: 'SignatureProducts | Learn More',
+    });
     router.push('/products'); // Adjust the path based on your routing setup
+  };
+  const handleViewDetailsClick = (product) => {
+    trackEvent({
+      action: 'click_view_details',
+      category: 'Product',
+      label: product.product_name,
+      value: product.product_id,
+    });
   };
   return (
     <Box
@@ -216,6 +230,7 @@ const SignatureProducts = () => {
                     variant="text"
                     component={Link}
                     href={`/product/${product.product_id}`}
+                    onClick={() => handleViewDetailsClick(product)}
                   >
                     View Details
                   </Button>

@@ -8,11 +8,17 @@ import {
   CardMedia,
 } from '@mui/material';
 import { useRouter } from 'next/router';
+import { useAnalytics } from '../lib/useAnalytics';
 
 const AboutUs = () => {
   const router = useRouter();
-
+  const { trackEvent } = useAnalytics();
   const handleLearnMore = () => {
+    trackEvent({
+      action: 'click',
+      category: 'button',
+      label: 'About Us | Learn More',
+    });
     router.push('/about'); // Adjust the path based on your routing setup
   };
   return (
