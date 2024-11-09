@@ -33,13 +33,15 @@ const About = () => {
             color="textSecondary"
             sx={{ mb: 2 }}
           >
-            Welcome to Suchitra Foods, an exciting new addition to the Suchitra
-            Industries family, which has been dedicated to quality and
-            innovation since its founding in 2018. Suchitra Industries has grown
-            to become a trusted provider of eco-friendly non-woven bags in
-            Hyderabad, serving over 500+ happy clients worldwide. With the
-            continued support of our valued customers, we are thrilled to expand
-            into the world of homemade Indian foods.
+            At Suchitra Foods, we are passionate about bringing the authentic
+            flavors of Andhra and Telangana to your table. With handcrafted
+            spice powders, each made using premium ingredients and time-honored
+            recipes, we aim to capture the true essence of regional Indian
+            cuisine. Committed to the highest standards of taste, freshness, and
+            hygiene, our offerings provide the unmistakable richness of homemade
+            goodness. We currently offer Kandi Podi, Nuvvula Podi, Palli Podi,
+            Karapodi, Kobbari Podi, Putnalu Podi, and Kura Podi, with exciting
+            products like Nalla Karam, Sambar Podi, and Pudina Podi coming soon.
           </Typography>
           <Typography
             variant="h6"
@@ -47,12 +49,13 @@ const About = () => {
             color="textSecondary"
             sx={{ mb: 2 }}
           >
-            Suchitra Foods brings the essence of Andhra and Telangana flavors to
-            life in our handcrafted pickles and spice powders, each made with
-            premium ingredients and traditional recipes. Committed to the
-            highest standards of taste, freshness, and hygiene, we invite you to
-            experience the rich, authentic taste of homemade
-            goodness in every bite.
+            Our journey from eco-friendly non-woven bags to culinary delights
+            reflects our dedication to quality across industries. With over 500
+            happy clients globally in our original venture, Suchitra Industries,
+            we bring that same commitment to excellence as we expand into the
+            realm of traditional Indian flavors. Join us in savoring the rich,
+            comforting taste of homemade spice powders and pickles, crafted with
+            care and authenticity in every batch.
           </Typography>
         </Box>
       </Container>

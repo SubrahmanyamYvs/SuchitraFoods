@@ -45,7 +45,7 @@ const Footer = () => {
     >
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={8}>
             <Typography variant="h6" gutterBottom>
               Contact Us
             </Typography>
@@ -57,10 +57,10 @@ const Footer = () => {
                 <Typography
                   variant="body2"
                   component={Link}
-                  href="mailto:support@suchitrafoods.com"
+                  href="mailto:connect@suchitrafoods.com"
                   color="white"
                 >
-                  support@suchitrafoods.com
+                  connect@suchitrafoods.com
                 </Typography>
               </Grid>
             </Grid>
@@ -123,11 +123,15 @@ const Footer = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h6" gutterBottom>
+          <Grid item xs={12} md={4} sx={{ minWidth: { md: '500px' } }}>
+            <Typography
+              variant="h6"
+              gutterBottom
+              sx={{ textAlign: { xs: 'left', md: 'right' } }}
+            >
               Useful Links
             </Typography>
-            <Box sx={{ mt: 2 }}>
+            <Box sx={{ mt: 2, textAlign: { xs: 'left', md: 'right' } }}>
               <Link
                 href="/privacy-policy"
                 variant="body2"

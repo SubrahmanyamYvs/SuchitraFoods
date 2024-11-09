@@ -22,14 +22,18 @@ const products = [
       'Our Kandi Podi is a traditional Andhra spice powder made from premium quality lentils, carefully roasted and ground to perfection. It has a savory, rich flavor that makes it a comforting addition to any meal.',
     best_used_for:
       'Mixing with rice, ghee, and pickles or as a flavorful topping for dosa and idli.',
-    quantities_available: ['100gms', '200gms'],
+    quantities_available: ['100gms', '250gms', '500gms', '1KG'],
     prices: {
       '100gms': 150,
-      '200gms': 165,
+      '250gms': 175,
+      '500gms': 300,
+      '1KG': 575,
     },
     discountedPrices: {
       '100gms': 125,
-      '200gms': 145,
+      '250gms': 150,
+      '500gms': 275,
+      '1KG': 525,
     },
   },
   {
@@ -40,51 +44,59 @@ const products = [
       'Finely ground from roasted sesame seeds, this podi adds a nutty richness and health benefits. A sprinkle transforms simple dishes with depth and a hint of sesame.',
     best_used_for:
       'Mixing with rice, seasoning salads, or adding richness to curries.',
-    quantities_available: ['100gms', '200gms'],
+    quantities_available: ['100gms', '250gms', '500gms', '1KG'],
     prices: {
       '100gms': 150,
-      '200gms': 165,
+      '250gms': 175,
+      '500gms': 300,
+      '1KG': 575,
     },
     discountedPrices: {
       '100gms': 125,
-      '200gms': 145,
+      '250gms': 150,
+      '500gms': 275,
+      '1KG': 525,
     },
   },
   {
     product_id: 'SF-03',
     product_image: '/images/karam.jpg',
-    product_name: 'Nalla Karapodi/Idli Karam',
+    product_name: 'Karam Podi/Idli Karam',
     product_description:
       'Spicy and smoky, this chili powder packs an intense flavor, ideal for adding heat. Made in a clean environment, it’s a delicious way to spice up your breakfast dishes or curries.',
     best_used_for: 'Pairing with ghee on idli, dosa, or upma.',
-    quantities_available: ['100gms', '200gms'],
+    quantities_available: ['100gms', '250gms', '500gms', '1KG'],
     prices: {
       '100gms': 150,
-      '200gms': 165,
+      '250gms': 175,
+      '500gms': 300,
+      '1KG': 575,
     },
     discountedPrices: {
       '100gms': 125,
-      '200gms': 145,
+      '250gms': 150,
+      '500gms': 275,
+      '1KG': 525,
     },
   },
-  {
-    product_id: 'SF-04',
-    product_image: '/images/karam.jpg',
-    product_name: 'Kura Podi',
-    product_description:
-      'A special blend of spices, Kura Podi infuses curries and vegetable dishes with warmth and depth. This spice mix captures the traditional flavors of Andhra and Telangana.',
-    best_used_for:
-      'Flavoring vegetable curries, enhancing gravies, and adding aroma to stir-fries.',
-    quantities_available: ['100gms', '200gms'],
-    prices: {
-      '100gms': 150,
-      '200gms': 165,
-    },
-    discountedPrices: {
-      '100gms': 125,
-      '200gms': 145,
-    },
-  },
+  // {
+  //   product_id: 'SF-04',
+  //   product_image: '/images/karam.jpg',
+  //   product_name: 'Kura Podi',
+  //   product_description:
+  //     'A special blend of spices, Kura Podi infuses curries and vegetable dishes with warmth and depth. This spice mix captures the traditional flavors of Andhra and Telangana.',
+  //   best_used_for:
+  //     'Flavoring vegetable curries, enhancing gravies, and adding aroma to stir-fries.',
+  //   quantities_available: ['100gms', '250gms', '500gms', '1KG'],
+  //   prices: {
+  //     '100gms': 150,
+  //     '200gms': 165,
+  //   },
+  //   discountedPrices: {
+  //     '100gms': 125,
+  //     '200gms': 145,
+  //   },
+  // },
 ];
 
 const SignatureProducts = () => {

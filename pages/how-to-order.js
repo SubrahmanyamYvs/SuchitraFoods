@@ -2,26 +2,26 @@ import React from 'react';
 import { Container, Box, Typography, Link } from '@mui/material';
 import Head from 'next/head';
 
-const PrivacyPolicy = () => {
+const HowToOrder = () => {
   return (
     <>
       <Head>
-        <title> Privacy Policy | Suchitra Foods</title>
-        <meta name="description" content={`Suchitra Foods Privacy Policy`} />
-        <meta property="og:title" content={`Privacy Policy | Suchitra Foods`} />
+        <title> How To Order | Suchitra Foods</title>
+        <meta name="description" content={`Suchitra Foods How To Order`} />
+        <meta property="og:title" content={`How To Order | Suchitra Foods`} />
         <meta
           property="og:description"
-          content={`Suchitra Foods Privacy Policy`}
+          content={`Suchitra Foods How To Order`}
         />
         <meta
           property="og:url"
-          content={`https://www.suchitrafoods.com/privacy-policy`}
+          content={`https://www.suchitrafoods.com/how-to-order`}
         />
       </Head>
       <Container maxWidth="md" sx={{ mt: 4 }}>
         <Box>
           <Typography variant="h4" gutterBottom>
-            Privacy Policy
+            How to order
           </Typography>
 
           <Typography variant="body1">
@@ -107,7 +107,6 @@ const PrivacyPolicy = () => {
             <Link href="mailto:connect@suchitrafoods.com">
               connect@suchitrafoods.com
             </Link>
-            .
           </Typography>
         </Box>
       </Container>
@@ -115,4 +114,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default HowToOrder;

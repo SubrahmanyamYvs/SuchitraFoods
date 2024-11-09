@@ -39,6 +39,25 @@ const MyApp = ({ Component, pageProps }) => {
         {/* Additional Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
+        <link rel="manifest" href="/site.webmanifest"></link>
+        <link rel="shortcut icon" href="/images/ico/suchitra.ico"></link>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/ico//apple-touch-icon.png"
+        ></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/ico//favicon-32x32.png"
+        ></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/images/ico//favicon-16x16.png"
+        ></link>
         <link rel="canonical" href="https://www.suchitrafoods.com/" />
         {/* Google Analytics */}
         <script

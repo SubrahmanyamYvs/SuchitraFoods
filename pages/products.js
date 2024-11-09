@@ -18,14 +18,18 @@ export const products = [
       'Our Kandi Podi blends high-quality lentils with rich, savory flavor. Perfect with mango, tomato, or Gongura pickles, it enhances rice and ghee with a comforting taste.',
     best_used_for:
       'Mixing with rice, ghee, and pickles or as a flavorful topping for dosa and idli.',
-    quantities_available: ['100gms', '200gms'],
+    quantities_available: ['100gms', '250gms', '500gms', '1KG'],
     prices: {
-      '100gms': 125,
-      '200gms': 145,
+      '100gms': 150,
+      '250gms': 175,
+      '500gms': 300,
+      '1KG': 575,
     },
     discountedPrices: {
       '100gms': 125,
-      '200gms': 145,
+      '250gms': 150,
+      '500gms': 275,
+      '1KG': 525,
     },
     ingredients: [
       'Lentils',
@@ -51,14 +55,18 @@ export const products = [
       'Finely ground from roasted sesame seeds, this podi adds a nutty richness and health benefits. A sprinkle transforms simple dishes with depth and a hint of sesame.',
     best_used_for:
       'Mixing with rice, seasoning salads, or adding richness to curries.',
-    quantities_available: ['100gms', '200gms'],
+    quantities_available: ['100gms', '250gms', '500gms', '1KG'],
     prices: {
-      '100gms': 125,
-      '200gms': 145,
+      '100gms': 150,
+      '250gms': 175,
+      '500gms': 300,
+      '1KG': 575,
     },
     discountedPrices: {
       '100gms': 125,
-      '200gms': 145,
+      '250gms': 150,
+      '500gms': 275,
+      '1KG': 525,
     },
     ingredients: [
       'Lentils',
@@ -84,14 +92,18 @@ export const products = [
       'Bold, nutty, and packed with flavor, our Palli Podi uses premium peanuts ground to perfection. It brings a satisfying crunch and a touch of protein to any meal.',
     best_used_for:
       'Rice dishes, chutneys, or as a crunchy side for breakfast dishes like idli and dosa.',
-    quantities_available: ['100gms', '200gms'],
+    quantities_available: ['100gms', '250gms', '500gms', '1KG'],
     prices: {
-      '100gms': 125,
-      '200gms': 145,
+      '100gms': 150,
+      '250gms': 175,
+      '500gms': 300,
+      '1KG': 575,
     },
     discountedPrices: {
       '100gms': 125,
-      '200gms': 145,
+      '250gms': 150,
+      '500gms': 275,
+      '1KG': 525,
     },
     ingredients: [
       'Lentils',
@@ -111,19 +123,23 @@ export const products = [
   },
   {
     product_id: 'SF-04',
-    product_name: 'Nalla Karapodi/Idli Karam',
+    product_name: 'Karam Podi/Idli Karam',
     product_image: '/images/karam.jpg',
     product_description:
       'Spicy and smoky, this chili powder packs an intense flavor, ideal for adding heat. Made in a clean environment, it’s a delicious way to spice up your breakfast dishes or curries.',
     best_used_for: 'Pairing with ghee on idli, dosa, or upma.',
-    quantities_available: ['100gms', '200gms'],
+    quantities_available: ['100gms', '250gms', '500gms', '1KG'],
     prices: {
-      '100gms': 125,
-      '200gms': 145,
+      '100gms': 150,
+      '250gms': 175,
+      '500gms': 300,
+      '1KG': 575,
     },
     discountedPrices: {
       '100gms': 125,
-      '200gms': 145,
+      '250gms': 150,
+      '500gms': 275,
+      '1KG': 525,
     },
     ingredients: [
       'Lentils',
@@ -149,14 +165,18 @@ export const products = [
       'Sun-dried coconut creates this creamy, naturally sweet podi. Bringing tropical flavors of South India, it enriches every bite with a homemade touch.',
     best_used_for:
       'Adding depth to rice, curries, vegetable dishes, or topping idli and dosa.',
-    quantities_available: ['100gms', '200gms'],
+    quantities_available: ['100gms', '250gms', '500gms', '1KG'],
     prices: {
-      '100gms': 125,
-      '200gms': 145,
+      '100gms': 150,
+      '250gms': 175,
+      '500gms': 300,
+      '1KG': 575,
     },
     discountedPrices: {
       '100gms': 125,
-      '200gms': 145,
+      '250gms': 150,
+      '500gms': 275,
+      '1KG': 525,
     },
     ingredients: [
       'Lentils',
@@ -182,14 +202,18 @@ export const products = [
       'Lightly nutty and made from roasted chickpeas, this podi is packed with protein and crunch, making healthy eating delicious and easy.',
     best_used_for:
       'Mixing with rice and ghee or topping your favorite breakfast dishes.',
-    quantities_available: ['100gms', '200gms'],
+    quantities_available: ['100gms', '250gms', '500gms', '1KG'],
     prices: {
-      '100gms': 125,
-      '200gms': 145,
+      '100gms': 150,
+      '250gms': 175,
+      '500gms': 300,
+      '1KG': 575,
     },
     discountedPrices: {
       '100gms': 125,
-      '200gms': 145,
+      '250gms': 150,
+      '500gms': 275,
+      '1KG': 525,
     },
     ingredients: [
       'Lentils',
@@ -215,14 +239,18 @@ export const products = [
       'A special blend of spices, Kura Podi infuses curries and vegetable dishes with warmth and depth. This spice mix captures the traditional flavors of Andhra and Telangana.',
     best_used_for:
       'Flavoring vegetable curries, enhancing gravies, and adding aroma to stir-fries.',
-    quantities_available: ['100gms', '200gms'],
+    quantities_available: ['100gms', '250gms', '500gms', '1KG'],
     prices: {
-      '100gms': 125,
-      '200gms': 145,
+      '100gms': 150,
+      '250gms': 175,
+      '500gms': 300,
+      '1KG': 575,
     },
     discountedPrices: {
       '100gms': 125,
-      '200gms': 145,
+      '250gms': 150,
+      '500gms': 275,
+      '1KG': 525,
     },
     ingredients: [
       'Lentils',

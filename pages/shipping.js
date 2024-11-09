@@ -43,7 +43,7 @@ const Shipping = () => {
           </Box>
           <Box my={2}>
             <Typography variant="h6">Order Tracking:</Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" gutterBottom>
               Tracking details sent via WhatsApp upon dispatch.
             </Typography>
           </Box>

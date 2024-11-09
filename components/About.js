@@ -46,7 +46,7 @@ const AboutUs = () => {
         {/* Image Section */}
         <CardMedia
           component="img"
-          image="/images/logo.avif"
+          image="/images/SuchitraFoods.png"
           alt="About Us"
           sx={{
             width: { md: '50%' },
@@ -82,12 +82,15 @@ const AboutUs = () => {
               mb: 2,
             }}
           >
-            Welcome to Suchitra Foods, the newest venture from Suchitra
-            Industries, established in 2018. Known for quality and innovation,
-            we serve over 500+ clients worldwide with our eco-friendly Non-Woven
-            bags. Now, we’re bringing that same commitment to excellence to our
-            homemade pickles and spice powders, offering authentic Andhra and
-            Telangana flavors crafted with premium ingredients.
+            Welcome to Suchitra Foods, an exciting new venture by Suchitra
+            Industries, established in 2018. With a strong reputation for
+            quality and innovation, we proudly serve over 500 clients globally
+            through our eco-friendly Non-Woven bags. Now, we’re bringing that
+            same commitment to excellence into authentic homemade spice powders,
+            capturing the authentic flavors of Andhra and Telangana. Each
+            product is crafted with premium ingredients to bring you the rich
+            and traditional taste of Indian cuisine, straight from our kitchen
+            to your table.
           </Typography>
           <Button
             variant="contained"

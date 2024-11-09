@@ -15,19 +15,19 @@ const Faq = () => {
   // Sample FAQs
   const faqs = [
     {
-      question: 'What is the estimated delivery time?',
+      question: 'How can I place an order?',
       answer:
-        'Delivery times vary by location, but most orders are delivered within 3-5 business days.',
+        'Currently, orders are accepted through WhatsApp. Browse products on our website, then message us with your selected products and quantities at +91-9032090990. We’ll confirm and guide you through the payment process.',
     },
     {
-      question: 'Are your products suitable for vegetarians?',
+      question: 'What payment methods are available?',
       answer:
-        'Yes, all of our products are made from vegetarian-friendly ingredients.',
+        'Currently, we accept UPI payments through Google Pay, PhonePe, Cred etc. Please send payments to +91-9032090990 (Name – Suchitra Industries/YVS Subrahmanyam).',
     },
     {
-      question: 'What payment methods do you accept?',
+      question: 'What are the shipping charges?',
       answer:
-        'We accept all major credit cards, debit cards, and digital payment options.',
+        'Shipping fees are calculated at checkout based on location and order size. We offer free shipping for orders meeting a minimum value of ₹500',
     },
     {
       question: 'How do I track my order?',
@@ -35,19 +35,24 @@ const Faq = () => {
         'Once your order ships, we’ll send you a tracking link via email or SMS.',
     },
     {
-      question: 'Can I return a product?',
+      question: 'Do you offer bulk orders or special packaging for events?',
       answer:
-        'Yes, we offer a 30-day return policy. Please contact customer support for more details.',
+        'Yes, we accommodate bulk orders for family functions, weddings, and special events. Please contact us for customized options and pricing.',
     },
     {
-      question: 'What is your commitment to sustainability?',
+      question: 'How do I track my order?',
       answer:
-        'We prioritize environmentally-friendly practices in our product development and packaging to reduce our carbon footprint.',
+        'Once your order is shipped, we will share tracking details via WhatsApp for you to monitor the delivery status.',
     },
     {
-      question: 'What materials are used in packaging?',
+      question: 'Can I return or cancel my order?',
       answer:
-        'Our packaging is eco-friendly, biodegradable, and designed to minimize environmental impact while ensuring product quality.',
+        'Cancellations are accepted before dispatch with a nominal fee. Currently, we do not accept returns, but if you receive a damaged product, contact us immediately for assistance.',
+    },
+    {
+      question: 'Do you ship internationally?',
+      answer:
+        'Yes, we can ship to select international locations. Please reach out for more details on international shipping costs and timelines.',
     },
   ];
 
@@ -75,7 +80,7 @@ const Faq = () => {
         ))}
       </Box>
       {/* Sustainability Section */}
-      <Box
+      {/* <Box
         sx={{ mt: 6, p: 2, backgroundColor: '#FFF6E5', borderRadius: '8px' }}
       >
         <Typography variant="h4" align="center" gutterBottom>
@@ -87,10 +92,10 @@ const Faq = () => {
           sourced materials. Our goal is to reduce waste, conserve resources,
           and contribute to a healthier planet.
         </Typography>
-      </Box>
+      </Box> */}
 
       {/* Packaging Information Section */}
-      <Box
+      {/* <Box
         sx={{ mt: 6, p: 2, backgroundColor: '#E7F6E7', borderRadius: '8px' }}
       >
         <Typography variant="h4" align="center" gutterBottom>
@@ -101,7 +106,7 @@ const Faq = () => {
           Each product is packaged with care to ensure minimal environmental
           impact while maintaining quality and freshness.
         </Typography>
-      </Box>
+      </Box> */}
     </Container>
   );
 };

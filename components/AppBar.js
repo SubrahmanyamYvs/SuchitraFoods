@@ -45,6 +45,11 @@ const ResponsiveAppBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Logo */}
+          <img
+            src="/images/logo.svg"
+            alt="Logo"
+            style={{ height: 50, marginRight: 10 }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -59,7 +64,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            Suchitra Foods
+            SUCHITRA FOODS
           </Typography>
 
           {/* Mobile Menu Icon */}
@@ -89,6 +94,15 @@ const ResponsiveAppBar = () => {
                   button
                   onClick={() => {
                     handleCloseDrawer();
+                    router.push('/how-to-order');
+                  }}
+                >
+                  <ListItemText primary="How to order" />
+                </ListItem>
+                <ListItem
+                  button
+                  onClick={() => {
+                    handleCloseDrawer();
                     router.push('/products');
                   }}
                 >
@@ -102,6 +116,15 @@ const ResponsiveAppBar = () => {
                   }}
                 >
                   <ListItemText primary="About Us" />
+                </ListItem>
+                <ListItem
+                  button
+                  onClick={() => {
+                    handleCloseDrawer();
+                    router.push('/contact-us');
+                  }}
+                >
+                  <ListItemText primary="Contact Us" />
                 </ListItem>
               </List>
             </Drawer>
@@ -123,16 +146,28 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            Suchitra Foods
+            SUCHITRA FOODS
           </Typography>
 
           {/* Desktop Nav Links */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: { md: 'right' },
+            }}
+          >
+            <Button color="inherit" component="a" href="/how-to-order">
+              How to Order
+            </Button>
             <Button color="inherit" component="a" href="/products">
               Products
             </Button>
             <Button color="inherit" component="a" href="/about">
               About Us
+            </Button>
+            <Button color="inherit" component="a" href="/contact-us">
+              Contact Us
             </Button>
           </Box>
 
