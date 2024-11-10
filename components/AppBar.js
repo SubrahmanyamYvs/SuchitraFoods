@@ -59,26 +59,42 @@ const ResponsiveAppBar = () => {
               }}
             />
           )} */}
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontWeight: 700,
-              letterSpacing: '.1rem',
-              color: 'inherit',
-              textDecoration: 'none',
-              fontFamily: 'Tangerine, cursive',
-              fontStyle: 'normal',
-              fontSize: '3.5rem',
-            }}
-          >
-            Suchitra Foods
-          </Typography>
-
+          <Box display="flex" flexDirection="column">
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                mt: 1,
+                display: { xs: 'none', md: 'flex' },
+                fontWeight: 700,
+                letterSpacing: '.1rem',
+                color: 'inherit',
+                textDecoration: 'none',
+                fontFamily: 'Tangerine, cursive',
+                fontStyle: 'normal',
+                fontSize: '3.5rem',
+                lineHeight: 'normal',
+              }}
+            >
+              Suchitra Foods
+            </Typography>
+            {/* Tagline */}
+            <Typography
+              variant="subtitle2"
+              component="div"
+              color="inherit"
+              sx={{
+                fontSize: '1rem',
+                ml: '20px',
+                display: { xs: 'none', md: 'flex' },
+              }}
+            >
+              Authentic * Aromatic * Alluring
+            </Typography>
+          </Box>
           {/* Mobile Menu Icon */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -141,29 +157,45 @@ const ResponsiveAppBar = () => {
               </List>
             </Drawer>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              ml: 2,
-              fontSize: '1.3rem',
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontWeight: 700,
-              letterSpacing: '.1rem',
-              color: 'inherit',
-              textDecoration: 'none',
-              fontFamily: 'Tangerine, cursive',
-              fontStyle: 'normal',
-              fontSize: '3.5rem',
-            }}
-          >
-            Suchitra Foods
-          </Typography>
-
+          <Box display="flex" flexDirection="column">
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 3,
+                mt: 1,
+                display: { xs: 'flex', md: 'none' },
+                flexGrow: 1,
+                flexDirection: 'column',
+                fontWeight: 700,
+                letterSpacing: '.1rem',
+                color: 'inherit',
+                textDecoration: 'none',
+                fontFamily: 'Tangerine, cursive',
+                fontStyle: 'normal',
+                fontSize: '3.5rem',
+                justifyContent: 'center',
+                lineHeight: 'normal',
+              }}
+            >
+              Suchitra Foods
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              component="div"
+              color="inherit"
+              sx={{
+                fontSize: '1rem',
+                ml: '20px',
+                mt: '-5px',
+                display: { xs: 'flex', md: 'none' },
+              }}
+            >
+              Authentic * Aromatic * Alluring
+            </Typography>
+          </Box>
           {/* Desktop Nav Links */}
           <Box
             sx={{

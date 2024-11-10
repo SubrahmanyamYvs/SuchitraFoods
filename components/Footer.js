@@ -9,7 +9,6 @@ import {
 } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { useTheme } from '@mui/material/styles';
 
@@ -19,7 +18,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear(); // Get the current year
   const phoneNumber = '+917331130990'; // Replace with actual phone number
   const preFilledText = encodeURIComponent(
-    "Hi! I'm interested in learning more about your products."
+    'Hi! I am interested in your products.'
   );
   return (
     <Box

@@ -63,7 +63,15 @@ const ContactUs = () => {
           content={`https://www.suchitrafoods.com/contact-us`}
         />
       </Head>
-      <Box sx={{ display: 'flex', p: 3, maxWidth: 1200, mx: 'auto' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          p: 3,
+          maxWidth: 1200,
+          mx: 'auto',
+          flexDirection: { xs: 'column', md: 'row' },
+        }}
+      >
         {/* Sidebar with Contact Information */}
         <Box sx={{ width: 300, mr: 4 }}>
           <Paper elevation={3} sx={{ p: 3 }}>
@@ -107,7 +115,7 @@ const ContactUs = () => {
         </Box>
 
         {/* Main Contact Form or Information Section */}
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, mt: { xs: 4, md: 0 } }}>
           <Typography variant="h4" fontWeight="bold" gutterBottom>
             Get in Touch
           </Typography>
