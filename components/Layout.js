@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       <ResponsiveAppBar />
       <Banner
         backgroundImage="/images/hero.jpg"
-        title="Rich Flavours of Home made Spice Powders with Suchitra Foods!"
+        title="Rich Flavours of Home made Spice Powders"
         description="Bringing the rich flavors of homemade goodness to your table with authentic spice powders."
         buttonText="Explore Products"
         buttonAction={() => {
