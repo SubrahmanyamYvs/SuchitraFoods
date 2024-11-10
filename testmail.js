@@ -1,7 +1,5 @@
 const sendgrid = require('@sendgrid/mail');
-sendgrid.setApiKey(
-  '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'
-);
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 sendgrid
   .send({
