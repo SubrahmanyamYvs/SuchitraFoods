@@ -1,116 +1,94 @@
 import React from 'react';
-import { Container, Box, Typography, Link } from '@mui/material';
-import Head from 'next/head';
+import { Box, Typography, Paper } from '@mui/material';
+import {
+  Timeline,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+} from '@mui/lab';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import QrCodeIcon from '@mui/icons-material/QrCode';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+
+const steps = [
+  {
+    icon: <ShoppingCartIcon />,
+    title: 'Browse & Finalize Products',
+    description: 'Select products, choose preferred size and quantity.',
+  },
+  {
+    icon: <WhatsAppIcon />,
+    title: 'Send WhatsApp Message',
+    description: 'Message +91 73311 30990 with your order details.',
+  },
+  {
+    icon: <CheckCircleIcon />,
+    title: 'Order Acknowledged',
+    description: 'Order confirmation will be sent via WhatsApp.',
+  },
+  {
+    icon: <QrCodeIcon />,
+    title: 'Send UPI Payment',
+    description: 'Make payment to +91 90320 90990 using UPI apps.',
+  },
+  {
+    icon: <LocalShippingIcon />,
+    title: 'Order Confirmed & Sent for Delivery',
+    description: 'Your order is confirmed and ready for delivery.',
+  },
+];
 
 const HowToOrder = () => {
   return (
-    <>
-      <Head>
-        <title> How To Order | Suchitra Foods</title>
-        <meta name="description" content={`Suchitra Foods How To Order`} />
-        <meta property="og:title" content={`How To Order | Suchitra Foods`} />
-        <meta
-          property="og:description"
-          content={`Suchitra Foods How To Order`}
-        />
-        <meta
-          property="og:url"
-          content={`https://www.suchitrafoods.com/how-to-order`}
-        />
-      </Head>
-      <Container maxWidth="md" sx={{ mt: 4 }}>
-        <Box>
-          <Typography variant="h4" gutterBottom>
-            How to order
-          </Typography>
+    <Box sx={{ p: 3, maxWidth: 900, mx: 'auto' }}>
+      <Typography variant="h4" align="center" gutterBottom fontWeight="bold">
+        Follow These Steps to Order
+      </Typography>
 
-          <Typography variant="body1">
-            Welcome to suchitrafoods.com (“Site”). The domain{' '}
-            <Link href="https://suchitrafoods.com" target="_blank">
-              https://suchitrafoods.com
-            </Link>{' '}
-            is owned by Suchitra Industries, Hyderabad. By visiting this Site,
-            you accept the following conditions. Please read them carefully.
-          </Typography>
+      <Box
+        sx={{
+          bgcolor: '#FF8C42',
+          color: 'white',
+          textAlign: 'center',
+          borderRadius: 2,
+          my: 4,
+          py: 1.5,
+        }}
+      >
+        <Typography variant="h5">TO ORDER PRODUCT</Typography>
+      </Box>
 
-          <Typography variant="body1">
-            At Suchitra Foods, we respect your privacy and are committed to
-            protecting your personal information. This policy outlines how we
-            collect, use, and safeguard your data.
-          </Typography>
+      <Timeline position="alternate">
+        {steps.map((step, index) => (
+          <TimelineItem key={index}>
+            <TimelineSeparator>
+              <TimelineDot sx={{ bgcolor: '#FF8C42' }}>{step.icon}</TimelineDot>
+              {index < steps.length - 1 && (
+                <TimelineConnector sx={{ bgcolor: '#FF8C42' }} />
+              )}
+            </TimelineSeparator>
 
-          <Typography variant="h6" gutterBottom>
-            1. Information Collection
-          </Typography>
-          <Typography variant="body1">
-            We collect information when you visit our website, place an order,
-            or communicate with us. This may include your name, contact
-            information, and payment details.
-          </Typography>
-
-          <Typography variant="h6" gutterBottom>
-            2. Use of Information
-          </Typography>
-          <Typography variant="body1">
-            We use your information to process orders, communicate updates, and
-            improve our services. We may also send promotional offers if you
-            opt-in.
-          </Typography>
-
-          <Typography variant="h6" gutterBottom>
-            3. Data Sharing
-          </Typography>
-          <Typography variant="body1">
-            We do not sell or rent your data. We may share your information with
-            trusted third parties for payment processing, shipping, and
-            compliance with legal requirements.
-          </Typography>
-
-          <Typography variant="h6" gutterBottom>
-            4. Security
-          </Typography>
-          <Typography variant="body1">
-            We implement industry-standard security measures to protect your
-            data. However, no method of transmission over the internet is
-            completely secure.
-          </Typography>
-
-          <Typography variant="h6" gutterBottom>
-            5. Cookies
-          </Typography>
-          <Typography variant="body1">
-            Our website uses cookies to enhance your browsing experience. You
-            can manage cookie settings through your browser.
-          </Typography>
-
-          <Typography variant="h6" gutterBottom>
-            6. Your Rights
-          </Typography>
-          <Typography variant="body1">
-            You may request to access, correct, or delete your personal
-            information by contacting us.
-          </Typography>
-
-          <Typography variant="h6" gutterBottom>
-            7. Policy Updates
-          </Typography>
-          <Typography variant="body1">
-            We may update this policy periodically. Changes will be posted on
-            our website.
-          </Typography>
-
-          <Typography variant="h6" gutterBottom>
-            Contact Us
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            For any privacy-related questions, please reach out to us at{' '}
-            <Link href="mailto:connect@suchitrafoods.com">
-              connect@suchitrafoods.com
-            </Link>
-          </Typography>
-        </Box>
-      </Container>
-    </>
+            <TimelineContent>
+              <Paper
+                elevation={3}
+                sx={{ p: 2, bgcolor: '#FFF8F1', borderRadius: 2 }}
+              >
+                <Typography variant="h6" fontWeight="bold" color="text.primary">
+                  {step.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {step.description}
+                </Typography>
+              </Paper>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+      </Timeline>
+    </Box>
   );
 };
 

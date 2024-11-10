@@ -23,14 +23,14 @@ const Layout = ({ children }) => {
       <ResponsiveAppBar />
       <Banner
         backgroundImage="/images/hero.jpg"
-        title="Authentic Indian Home Spice Powders"
-        description="Discover the authentic flavors of India with our handcrafted spice powders, carefully blended in small batches for maximum freshness and aroma."
-        buttonText="Shop Now"
+        title="Taste the tradition with Suchitra Foods!"
+        description="Bringing the rich flavors of homemade goodness to your table with authentic spice powders."
+        buttonText="Explore Products"
         buttonAction={() => {
           trackEvent({
             action: 'click',
             category: 'button',
-            label: 'Shop Now',
+            label: 'Explore Products',
           });
           router.push('/products');
         }}

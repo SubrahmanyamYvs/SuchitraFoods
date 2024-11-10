@@ -50,6 +50,7 @@ const Banner = ({
         >
           {description}
         </Typography>
+
         {buttonText && (
           <Button
             variant="contained"

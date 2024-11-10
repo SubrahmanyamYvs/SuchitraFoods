@@ -59,6 +59,12 @@ const MyApp = ({ Component, pageProps }) => {
           href="/images/ico//favicon-16x16.png"
         ></link>
         <link rel="canonical" href="https://www.suchitrafoods.com/" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
+          rel="stylesheet"
+        ></link>
         {/* Google Analytics */}
         <script
           async

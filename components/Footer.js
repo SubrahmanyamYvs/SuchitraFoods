@@ -17,7 +17,7 @@ const Footer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detects mobile view
   const currentYear = new Date().getFullYear(); // Get the current year
-  const phoneNumber = '+919032090990'; // Replace with actual phone number
+  const phoneNumber = '+917331130990'; // Replace with actual phone number
   const preFilledText = encodeURIComponent(
     "Hi! I'm interested in learning more about your products."
   );
@@ -91,14 +91,14 @@ const Footer = () => {
                 <Typography
                   variant="body2"
                   component={Link}
-                  href="tel:+919032090990"
+                  href="tel:+917331130990"
                   color="white"
                 >
-                  +91 9032090990
+                  +91 7331130990
                 </Typography>
               </Grid>
             </Grid>
-            <Grid
+            {/* <Grid
               container
               spacing={2}
               alignItems="center"
@@ -113,7 +113,7 @@ const Footer = () => {
                   India
                 </Typography>
               </Grid>
-            </Grid>
+            </Grid> */}
             <Grid container alignItems="center" sx={{ mt: 1 }}>
               <Grid item>
                 <Typography variant="body2">
@@ -123,7 +123,12 @@ const Footer = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={4} sx={{ minWidth: { md: '500px' } }}>
+          <Grid
+            item
+            xs={12}
+            md={4}
+            sx={{ minWidth: { md: '370px', lg: '500px' } }}
+          >
             <Typography
               variant="h6"
               gutterBottom

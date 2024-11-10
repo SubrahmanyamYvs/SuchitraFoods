@@ -13,14 +13,18 @@ import {
   List,
   ListItem,
   ListItemText,
+  useMediaQuery,
 } from '@mui/material';
 // import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from 'next/router';
+import { useTheme } from '@mui/material/styles';
 
 const ResponsiveAppBar = () => {
+  const theme = useTheme();
   const router = useRouter();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detects mobile view
   const [drawerOpen, setDrawerOpen] = useState(false);
   // const [anchorElProfile, setAnchorElProfile] = useState(null);
 
@@ -45,11 +49,16 @@ const ResponsiveAppBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Logo */}
-          <img
-            src="/images/logo.svg"
-            alt="Logo"
-            style={{ height: 50, marginRight: 10 }}
-          />
+          {/* {!isMobile && (
+            <img
+              src="/images/logo.svg"
+              alt="Logo"
+              style={{
+                height: 50,
+                marginRight: 10,
+              }}
+            />
+          )} */}
           <Typography
             variant="h6"
             noWrap
@@ -62,9 +71,12 @@ const ResponsiveAppBar = () => {
               letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none',
+              fontFamily: 'Tangerine, cursive',
+              fontStyle: 'normal',
+              fontSize: '3.5rem',
             }}
           >
-            SUCHITRA FOODS
+            Suchitra Foods
           </Typography>
 
           {/* Mobile Menu Icon */}
@@ -144,9 +156,12 @@ const ResponsiveAppBar = () => {
               letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none',
+              fontFamily: 'Tangerine, cursive',
+              fontStyle: 'normal',
+              fontSize: '3.5rem',
             }}
           >
-            SUCHITRA FOODS
+            Suchitra Foods
           </Typography>
 
           {/* Desktop Nav Links */}

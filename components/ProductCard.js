@@ -58,7 +58,7 @@ const ProductCard = ({
         {/* Display Quantities and Prices */}
         <Box sx={{ marginTop: '1em' }}>
           <Typography variant="body2" color="text.secondary">
-            <strong>Available Quantities:</strong>
+            <strong>Pack Sizes:</strong>
           </Typography>
           <Box sx={{ marginTop: '0.5em' }}>
             {quantities_available.map((quantity) => (

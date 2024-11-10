@@ -38,7 +38,7 @@ const ProductDetail = ({ product }) => {
   return (
     <>
       <Head>
-        <title>{product.product_name} | Suchitra Foods</title>
+        <title>{`${product.product_name} | Suchitra Foods`}</title>
         <meta name="description" content={product.product_description} />
         <meta
           property="og:title"

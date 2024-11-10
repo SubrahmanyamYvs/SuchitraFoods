@@ -46,11 +46,12 @@ const AboutUs = () => {
         {/* Image Section */}
         <CardMedia
           component="img"
-          image="/images/SuchitraFoods.png"
+          image="/images/SuchitraFoods.svg"
           alt="About Us"
           sx={{
             width: { md: '50%' },
-            height: { xs: 'auto', md: '100%' },
+            height: { xs: '200px', md: '350px' },
+            padding: { xs: '1em', md: '2em' },
             objectFit: 'cover',
           }}
         />
@@ -59,6 +60,7 @@ const AboutUs = () => {
         <CardContent
           sx={{
             padding: { xs: '2em', md: '3em' },
+            paddingTop: { xs: '0' },
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
