@@ -12,16 +12,16 @@ export const products = [
       'Our Kandi Podi blends high-quality lentils with rich, savory flavor. Perfect with mango, tomato, or Gongura pickles, it enhances rice and ghee with a comforting taste.',
     best_used_for:
       'Mixing with rice, ghee, and pickles or as a flavorful topping for dosa and idli.',
-    quantities_available: ['250gms', '500gms', '1KG'],
+    quantities_available: ['250gms', '500gms', '1Kg'],
     prices: {
       '250gms': 175,
       '500gms': 300,
-      '1KG': 575,
+      '1Kg   ': 575,
     },
     discountedPrices: {
       '250gms': 150,
       '500gms': 275,
-      '1KG': 525,
+      '1Kg   ': 525,
     },
     ingredients: [
       'Kandi Pappu (Toor Dal)',
@@ -49,16 +49,16 @@ export const products = [
       'Finely ground from roasted sesame seeds, this podi adds a nutty richness and health benefits. A sprinkle transforms simple dishes with depth and a hint of sesame.',
     best_used_for:
       'Mixing with rice, seasoning salads, or adding richness to curries.',
-    quantities_available: ['250gms', '500gms', '1KG'],
+    quantities_available: ['250gms', '500gms', '1Kg'],
     prices: {
       '250gms': 175,
       '500gms': 300,
-      '1KG': 575,
+      '1Kg   ': 575,
     },
     discountedPrices: {
       '250gms': 150,
       '500gms': 275,
-      '1KG': 525,
+      '1Kg   ': 525,
     },
     ingredients: [
       'Nuvvulu (Sesame Seeds)',
@@ -81,16 +81,16 @@ export const products = [
       'Bold, nutty, and packed with flavor, our Palli Podi uses premium peanuts ground to perfection. It brings a satisfying crunch and a touch of protein to any meal.',
     best_used_for:
       'Rice dishes, chutneys, or as a crunchy side for breakfast dishes like idli and dosa.',
-    quantities_available: ['250gms', '500gms', '1KG'],
+    quantities_available: ['250gms', '500gms', '1Kg'],
     prices: {
       '250gms': 175,
       '500gms': 300,
-      '1KG': 575,
+      '1Kg   ': 575,
     },
     discountedPrices: {
       '250gms': 150,
       '500gms': 275,
-      '1KG': 525,
+      '1Kg   ': 525,
     },
     ingredients: [
       'Pallilu (Peanuts)',
@@ -114,16 +114,16 @@ export const products = [
     product_description:
       'Spicy and smoky, this chili powder packs an intense flavor, ideal for adding heat. Made in a clean environment, it’s a delicious way to spice up your breakfast dishes or curries.',
     best_used_for: 'Pairing with ghee on idli, dosa, or upma.',
-    quantities_available: ['250gms', '500gms', '1KG'],
+    quantities_available: ['250gms', '500gms', '1Kg'],
     prices: {
       '250gms': 175,
       '500gms': 300,
-      '1KG': 575,
+      '1Kg   ': 575,
     },
     discountedPrices: {
       '250gms': 150,
       '500gms': 275,
-      '1KG': 525,
+      '1Kg   ': 525,
     },
     ingredients: [
       'Dhaniyalu (Coriander Seeds)',
@@ -151,16 +151,16 @@ export const products = [
       'Sun-dried coconut creates this creamy, naturally sweet podi. Bringing tropical flavors of South India, it enriches every bite with a homemade touch.',
     best_used_for:
       'Adding depth to rice, curries, vegetable dishes, or topping idli and dosa.',
-    quantities_available: ['250gms', '500gms', '1KG'],
+    quantities_available: ['250gms', '500gms', '1Kg'],
     prices: {
       '250gms': 175,
       '500gms': 300,
-      '1KG': 575,
+      '1Kg   ': 575,
     },
     discountedPrices: {
       '250gms': 150,
       '500gms': 275,
-      '1KG': 525,
+      '1Kg   ': 525,
     },
     ingredients: [
       'Dry Kobbari (Dry Coconut)',
@@ -187,16 +187,16 @@ export const products = [
       'Lightly nutty and made from roasted chickpeas, this podi is packed with protein and crunch, making healthy eating delicious and easy.',
     best_used_for:
       'Mixing with rice and ghee or topping your favorite breakfast dishes.',
-    quantities_available: ['250gms', '500gms', '1KG'],
+    quantities_available: ['250gms', '500gms', '1Kg'],
     prices: {
       '250gms': 175,
       '500gms': 300,
-      '1KG': 575,
+      '1Kg   ': 575,
     },
     discountedPrices: {
       '250gms': 150,
       '500gms': 275,
-      '1KG': 525,
+      '1Kg   ': 525,
     },
     ingredients: [
       'Dry Kobbari (Dry Coconut)',
@@ -226,12 +226,12 @@ export const products = [
     prices: {
       '250gms': 175,
       '500gms': 300,
-      '1KG': 575,
+      '1Kg   ': 575,
     },
     discountedPrices: {
       '250gms': 150,
       '500gms': 275,
-      '1KG': 525,
+      '1Kg   ': 525,
     },
     ingredients: [
       'Senaga Pappu (Chana Dal)',
